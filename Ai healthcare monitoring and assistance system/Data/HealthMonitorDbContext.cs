@@ -1,0 +1,94 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace Ai_healthcare_monitoring_and_assistance_system.Data
+{
+    public class HealthMonitorDbContext : DbContext
+    {
+        public HealthMonitorDbContext(DbContextOptions<HealthMonitorDbContext> options) : base(options) { }
+
+        public DbSet<PatientReadingEntity> PatientReadings { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
+        public DbSet<AnomalyHistoryEntity> AnomalyHistory { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // PatientReading configuration
+            modelBuilder.Entity<PatientReadingEntity>()
+                .HasKey(p => p.Id);
+
+            modelBuilder.Entity<PatientReadingEntity>()
+                .Property(p => p.DeviceId)
+                .IsRequired();
+
+            modelBuilder.Entity<PatientReadingEntity>()
+                .Property(p => p.ReceivedAt)
+                .HasColumnType("datetime2");
+
+            modelBuilder.Entity<PatientReadingEntity>()
+                .HasIndex(p => p.DeviceId);
+
+            modelBuilder.Entity<PatientReadingEntity>()
+                .HasIndex(p => p.ReceivedAt);
+
+            // User configuration
+            modelBuilder.Entity<UserEntity>()
+                .HasKey(u => u.Id);
+
+            modelBuilder.Entity<UserEntity>()
+                .Property(u => u.Username)
+                .IsRequired();
+
+            modelBuilder.Entity<UserEntity>()
+                .HasIndex(u => u.Username)
+                .IsUnique();
+
+            modelBuilder.Entity<UserEntity>()
+                .Property(u => u.PasswordHash)
+                .IsRequired();
+
+            // Anomaly History configuration
+            modelBuilder.Entity<AnomalyHistoryEntity>()
+                .HasKey(a => a.Id);
+
+            modelBuilder.Entity<AnomalyHistoryEntity>()
+                .Property(a => a.DeviceId)
+                .IsRequired();
+
+            modelBuilder.Entity<AnomalyHistoryEntity>()
+                .HasIndex(a => new { a.DeviceId, a.MetricType });
+
+            modelBuilder.Entity<AnomalyHistoryEntity>()
+                .HasIndex(a => a.RecordedAt);
+        }
+    }
+
+    public class PatientReadingEntity
+    {
+        public int Id { get; set; }
+        public string? DeviceId { get; set; }
+        public long Timestamp { get; set; }
+        public DateTime ReceivedAt { get; set; }
+        public string? ActivityLevel { get; set; }
+        public string? DetectedAnomalies { get; set; } // JSON serialized
+        public string? ReadingData { get; set; } // JSON serialized full reading
+    }
+
+    public class UserEntity
+    {
+        public int Id { get; set; }
+        public string Username { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
+
+    public class AnomalyHistoryEntity
+    {
+        public int Id { get; set; }
+        public string DeviceId { get; set; } = string.Empty;
+        public string MetricType { get; set; } = string.Empty; // "HeartRate", "Temperature", "Acceleration", "AmbientTemp"
+        public float Value { get; set; }
+        public DateTime RecordedAt { get; set; }
+    }
+}

@@ -1,0 +1,190 @@
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\appsettings.Development.json
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\appsettings.json
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Ai healthcare monitoring and assistance system.exe
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Ai healthcare monitoring and assistance system.deps.json
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Ai healthcare monitoring and assistance system.runtimeconfig.json
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Ai healthcare monitoring and assistance system.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Ai healthcare monitoring and assistance system.pdb
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Azure.Core.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Azure.Identity.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Humanizer.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Bcl.TimeProvider.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Build.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Build.Tasks.Core.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Build.Utilities.Core.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.Core.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.Data.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.KMeansClustering.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.PCA.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.StandardTrainers.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.Transforms.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.CpuMath.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.ML.DataView.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.NET.StringTools.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.ClientModel.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.CodeDom.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Formats.Nrbf.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Numerics.Tensors.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Reflection.MetadataLoadContext.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Resources.Extensions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Security.Permissions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.Windows.Extensions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-arm\native\libLdaNative.so
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-arm\native\libLdaNative.so.dbg
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-arm64\native\libLdaNative.so
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-arm64\native\libLdaNative.so.dbg
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-x64\native\libLdaNative.so
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\linux-x64\native\libLdaNative.so.dbg
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\osx-arm64\native\libLdaNative.dylib
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\osx-arm64\native\libLdaNative.dylib.dwarf
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\osx-x64\native\libLdaNative.dylib
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\osx-x64\native\libLdaNative.dylib.dwarf
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-arm64\native\LdaNative.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-x64\native\LdaNative.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win-x86\native\LdaNative.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.csproj.AssemblyReference.cache
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.GeneratedMSBuildEditorConfig.editorconfig
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.AssemblyInfoInputs.cache
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.AssemblyInfo.cs
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.csproj.CoreCompileInputs.cache
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.MvcApplicationPartsAssemblyInfo.cs
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.MvcApplicationPartsAssemblyInfo.cache
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healt.26E8BB7D.Up2Date
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\refint\Ai healthcare monitoring and assistance system.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.pdb
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.genruntimeconfig.cache
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\ref\Ai healthcare monitoring and assistance system.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\BouncyCastle.Crypto.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ClosedXML.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\ExcelNumberFormat.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\Irony.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\itextsharp.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\SixLabors.Fonts.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.IO.Packaging.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\XLParser.dll

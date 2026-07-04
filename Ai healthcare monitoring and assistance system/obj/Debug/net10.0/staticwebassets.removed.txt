@@ -1,0 +1,5 @@
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\wwwroot\api.js
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\wwwroot\app.js
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\wwwroot\index.html
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\wwwroot\styles.css
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\wwwroot\README.md

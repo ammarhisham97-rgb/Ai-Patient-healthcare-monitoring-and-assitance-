@@ -1,0 +1,12 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "JwtSecret": "YourSuperSecretKeyForJWTAuthenticationMinimum32Characters!!!",
+  "JwtIssuer": "PatientMonitorAPI",
+  "JwtAudience": "PatientMonitorClient",
+  "AllowedHosts": "*"
+}

@@ -1,0 +1,885 @@
+﻿// ============================================================
+//  AI Patient Health Monitor — .NET Minimal API
+//  Receives JSON from NodeMCU ESP8266 via HTTP POST
+//  Port: 5011  |  Endpoint: POST /api/readings
+//  Features: JWT Auth, ML.NET Anomaly Detection, Smart Fall Detection
+// ============================================================
+
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.ML;
+using System.Collections.Concurrent;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using BCrypt.Net;
+using Ai_healthcare_monitoring_and_assistance_system.Data;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ── JWT Configuration ──────────────────────────────────────
+var jwtSecret = builder.Configuration["JwtSecret"] ?? "YourSuperSecretKeyForJWTAuthenticationMinimum32Characters!!!";
+var jwtIssuer = builder.Configuration["JwtIssuer"] ?? "PatientMonitorAPI";
+var jwtAudience = builder.Configuration["JwtAudience"] ?? "PatientMonitorClient";
+
+var key = Encoding.ASCII.GetBytes(jwtSecret);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = true,
+        ValidIssuer = jwtIssuer,
+        ValidateAudience = true,
+        ValidAudience = jwtAudience,
+        ValidateLifetime = true
+    };
+});
+
+builder.Services.AddAuthorization();
+
+// ── CORS Configuration ─────────────────────────────────────
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+// ── Database Context ──────────────────────────────────────
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<HealthMonitorDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// ── Services ───────────────────────────────────────────────
+builder.Services.AddSingleton<ReadingsStore>(sp => new ReadingsStore(sp));
+builder.Services.AddSingleton<UserStore>(sp => new UserStore(sp));
+builder.Services.AddSingleton<AnomalyDetectionService>();
+builder.Services.AddSingleton(sp => new MLContext());
+
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.PropertyNameCaseInsensitive = true;
+    options.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
+
+var app = builder.Build();
+
+app.UseCors("AllowAll");
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+// ── Auto-apply migrations on startup ────────────────────────
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+    db.Database.Migrate();
+
+    // ── Seed mock data if database is empty ────────────────
+    if (!db.PatientReadings.Any())
+    {
+        SeedMockData(db);
+    }
+}
+
+// ============================================================
+//  AUTH ENDPOINTS  — JWT Register/Login
+// ============================================================
+
+app.MapPost("/api/auth/register", (RegisterRequest req, UserStore userStore, ILogger<Program> logger) =>
+{
+    if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+        return Results.BadRequest(new { error = "Username and password required" });
+
+    if (userStore.UserExists(req.Username))
+        return Results.BadRequest(new { error = "User already exists" });
+
+    userStore.AddUser(req.Username, req.Password);
+    logger.LogInformation("[AUTH] New user registered: {Username}", req.Username);
+    return Results.Created($"/api/auth/user/{req.Username}", new { username = req.Username });
+});
+
+app.MapPost("/api/auth/login", (LoginRequest req, UserStore userStore, ILogger<Program> logger) =>
+{
+    if (string.IsNullOrWhiteSpace(req.Username) || string.IsNullOrWhiteSpace(req.Password))
+        return Results.BadRequest(new { error = "Username and password required" });
+
+    if (!userStore.ValidateUser(req.Username, req.Password))
+    {
+        logger.LogWarning("[AUTH] Failed login attempt: {Username}", req.Username);
+        return Results.Unauthorized();
+    }
+
+    var token = GenerateJwtToken(req.Username, jwtSecret, jwtIssuer, jwtAudience);
+    logger.LogInformation("[AUTH] User logged in: {Username}", req.Username);
+
+    return Results.Ok(new
+    {
+        token,
+        expiresIn = 3600,
+        tokenType = "Bearer"
+    });
+});
+
+// ============================================================
+//  POST /api/readings  ←  called by NodeMCU every 5 seconds
+// ============================================================
+app.MapPost("/api/readings", (PatientReading reading, ReadingsStore store, AnomalyDetectionService anomalyService, HealthMonitorDbContext db, ILogger<Program> logger) =>
+{
+    if (reading is null || string.IsNullOrWhiteSpace(reading.DeviceId))
+        return Results.BadRequest(new { error = "Invalid payload" });
+
+    reading.ReceivedAt = DateTime.UtcNow;
+
+    // ── Anomaly Detection ──────────────────────────────────
+    var anomalies = anomalyService.DetectAnomalies(reading);
+
+    // ── Smart Fall Detection (Enhanced) ────────────────────
+    var fallAlert = DetectFall(reading, logger);
+    if (fallAlert)
+        anomalies.Add("ANOMALY_FALL_DETECTED");
+
+    // ── Smart Activity Detection ────────────────────────────
+    var activityLevel = DetectActivity(reading);
+    reading.ActivityLevel = activityLevel;
+    reading.DetectedAnomalies = new List<string>(anomalies);
+
+    // ── Create database entity ────────────────────────────────
+    var entity = new PatientReadingEntity
+    {
+        DeviceId = reading.DeviceId,
+        Timestamp = reading.Timestamp,
+        ReceivedAt = reading.ReceivedAt,
+        ActivityLevel = reading.ActivityLevel,
+        DetectedAnomalies = JsonSerializer.Serialize(reading.DetectedAnomalies),
+        ReadingData = JsonSerializer.Serialize(reading)
+    };
+
+    // ── Save to Database via Store ────────────────────────────
+    try
+    {
+        store.Add(entity);
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Error saving reading to database");
+    }
+
+    // ── Console output ──────────────────────────────────────
+    logger.LogInformation("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+    logger.LogInformation("[{Time}] Reading from {DeviceId}", reading.ReceivedAt.ToString("HH:mm:ss"), reading.DeviceId);
+
+    if (reading.Temperature is not null)
+    {
+        logger.LogInformation("[TEMP]  Body  = {C:F1} °C  /  {F:F1} °F  | SensorOk={Ok}",
+            reading.Temperature.Celsius, reading.Temperature.Fahrenheit, reading.Temperature.SensorOk);
+        if (reading.Temperature.Fever)
+            logger.LogWarning("[TEMP]  *** FEVER DETECTED ***");
+    }
+
+    if (reading.HeartRate is not null)
+    {
+        if (reading.HeartRate.FingerDetected)
+        {
+            logger.LogInformation("[HR]    BPM={Bpm:F0}  Avg={Avg}  IR={IR}",
+                reading.HeartRate.Bpm, reading.HeartRate.AvgBpm, reading.HeartRate.IrRaw);
+            if (reading.HeartRate.HighRate)
+                logger.LogWarning("[HR]    *** HIGH HEART RATE ***");
+        }
+        else
+        {
+            logger.LogInformation("[HR]    No finger on sensor");
+        }
+    }
+
+    if (reading.Accelerometer is not null)
+    {
+        logger.LogInformation("[MPU]   Accel X={X:F2} Y={Y:F2} Z={Z:F2} | Mag={Mag:F2}",
+            reading.Accelerometer.X, reading.Accelerometer.Y,
+            reading.Accelerometer.Z, reading.Accelerometer.Magnitude);
+        if (reading.Accelerometer.FallDetected)
+            logger.LogWarning("[MPU]   *** FALL / IMPACT DETECTED ***");
+    }
+
+    if (reading.Gyroscope is not null)
+        logger.LogInformation("[MPU]   Gyro  X={X:F1} Y={Y:F1} Z={Z:F1}",
+            reading.Gyroscope.X, reading.Gyroscope.Y, reading.Gyroscope.Z);
+
+    logger.LogInformation("[PIR]   Motion: {M}  Activity: {A}", 
+        reading.MotionDetected ? "YES" : "no",
+        reading.ActivityLevel);
+
+    if (reading.Ambient is not null)
+    {
+        if (reading.Ambient.SensorOk)
+        {
+            logger.LogInformation("[DHT]   Ambient = {T:F1} °C  |  Humidity = {H:F1} %",
+                reading.Ambient.TempCelsius, reading.Ambient.Humidity);
+            if (reading.Ambient.TempCelsius > 35)
+                logger.LogWarning("[DHT]   *** HIGH AMBIENT TEMPERATURE ***");
+            if (reading.Ambient.Humidity > 80)
+                logger.LogWarning("[DHT]   *** HIGH HUMIDITY ***");
+        }
+        else
+        {
+            logger.LogWarning("[DHT]   Sensor FAILED");
+        }
+    }
+
+    if (reading.SensorStatus is not null)
+        logger.LogInformation("[STAT]  MPU={Mpu} MAX={Max} DS18={Ds} DHT={Dht} RSSI={Rssi} dBm",
+            reading.SensorStatus.MpuOk, reading.SensorStatus.MaxOk,
+            reading.SensorStatus.Ds18Ok, reading.SensorStatus.DhtOk,
+            reading.SensorStatus.WifiRssi);
+
+    // ── Alerts summary ──────────────────────────────────────
+    var alerts = BuildAlerts(reading);
+    alerts.AddRange(anomalies);
+
+    if (alerts.Count > 0)
+        logger.LogWarning("[ALERT] Active alerts: {Alerts}", string.Join(", ", alerts));
+
+    return Results.Ok(new
+    {
+        status = "received",
+        alerts,
+        anomalies,
+        activityLevel = reading.ActivityLevel,
+        stored = store.Count,
+        serverTime = reading.ReceivedAt
+    });
+});
+
+// ============================================================
+//  GET /api/readings          — last 100 readings
+// ============================================================
+app.MapGet("/api/readings", (ReadingsStore store) =>
+    Results.Ok(store.GetAll()));
+
+// ============================================================
+//  GET /api/readings/latest   — most recent reading
+// ============================================================
+app.MapGet("/api/readings/latest", (ReadingsStore store) =>
+{
+    var latest = store.GetLatest();
+    return latest is null ? Results.NotFound(new { error = "No readings yet" }) : Results.Ok(latest);
+});
+
+// ============================================================
+//  GET /api/readings/{deviceId} — readings for one device
+// ============================================================
+app.MapGet("/api/readings/{deviceId}", (string deviceId, ReadingsStore store) =>
+    Results.Ok(store.GetByDevice(deviceId)));
+
+// ============================================================
+//  GET /api/anomalies/summary — detected anomalies summary
+// ============================================================
+app.MapGet("/api/anomalies/summary", (ReadingsStore store) =>
+{
+    var readings = store.GetAll().ToList();
+    var anomalySummary = new
+    {
+        totalReadings = readings.Count,
+        readingsWithAnomalies = readings.Count(r => !string.IsNullOrEmpty(r.DetectedAnomalies)),
+        commonAnomalies = readings
+            .Where(r => !string.IsNullOrEmpty(r.DetectedAnomalies))
+            .SelectMany(r => JsonSerializer.Deserialize<List<string>>(r.DetectedAnomalies) ?? new())
+            .GroupBy(a => a)
+            .OrderByDescending(g => g.Count())
+            .Select(g => new { anomaly = g.Key, count = g.Count() })
+            .ToList()
+    };
+    return Results.Ok(anomalySummary);
+});
+
+// ============================================================
+//  GET /api/activity/summary — activity level analysis
+// ============================================================
+app.MapGet("/api/activity/summary", (ReadingsStore store) =>
+{
+    var readings = store.GetAll().ToList();
+    var activitySummary = new
+    {
+        totalReadings = readings.Count,
+        activityBreakdown = new
+        {
+            sedentary = readings.Count(r => r.ActivityLevel == "Sedentary"),
+            light = readings.Count(r => r.ActivityLevel == "Light"),
+            moderate = readings.Count(r => r.ActivityLevel == "Moderate"),
+            vigorous = readings.Count(r => r.ActivityLevel == "Vigorous")
+        },
+        recentActivity = readings.Take(10).Select(r => new { time = r.ReceivedAt, activity = r.ActivityLevel })
+    };
+    return Results.Ok(activitySummary);
+});
+
+// ============================================================
+//  GET /api/status            — API health check
+// ============================================================
+app.MapGet("/api/status", (ReadingsStore store) =>
+    Results.Ok(new
+    {
+        status = "online",
+        totalStored = store.Count,
+        serverTime = DateTime.UtcNow
+    }));
+
+// ============================================================
+//  MOCK DATA SEEDING (before app.Run)
+// ============================================================
+static void SeedMockData(HealthMonitorDbContext db)
+{
+    var baseTime = DateTime.UtcNow.AddHours(-2);
+    var deviceIds = new[] { "ESP_DEVICE_001", "ESP_DEVICE_002", "ESP_DEVICE_003" };
+    var anomalies = new[] { "ANOMALY_HEART_RATE", "ANOMALY_BODY_TEMP", "ANOMALY_ACCELERATION" };
+    var activities = new[] { "Sedentary", "Light", "Moderate", "Vigorous" };
+
+    var readings = new List<PatientReadingEntity>();
+
+    // Generate 50 mock readings distributed across devices and time
+    for (int i = 0; i < 50; i++)
+    {
+        var deviceId = deviceIds[i % deviceIds.Length];
+        var timestamp = baseTime.AddSeconds(i * 2.4);
+
+        // Simulate realistic sensor data
+        var temperature = 36.5f + (float)Random.Shared.NextDouble() * 1.5f; // 36.5-38°C
+        var heartRate = 60 + Random.Shared.Next(40);  // 60-100 BPM
+        var accelX = (float)(Random.Shared.NextDouble() - 0.5) * 2;
+        var accelY = (float)(Random.Shared.NextDouble() - 0.5) * 2;
+        var accelZ = (float)(Random.Shared.NextDouble() - 0.5) * 2;
+        var magnitude = MathF.Sqrt(accelX * accelX + accelY * accelY + accelZ * accelZ);
+        var humidity = 40 + Random.Shared.Next(40);   // 40-80%
+        var ambientTemp = 22 + Random.Shared.Next(6); // 22-28°C
+        var rssi = -50 - Random.Shared.Next(30);      // -50 to -80 dBm
+
+        // Occasionally add anomalies (10% chance)
+        var detectedAnomalies = new List<string>();
+        if (Random.Shared.Next(100) < 15)
+        {
+            detectedAnomalies.Add(anomalies[Random.Shared.Next(anomalies.Length)]);
+        }
+
+        // Occasionally add fever alert (5% chance)
+        var hasFever = Random.Shared.Next(100) < 5;
+        if (hasFever)
+        {
+            temperature = 38.5f + (float)Random.Shared.NextDouble();
+            detectedAnomalies.Add("ANOMALY_BODY_TEMP");
+        }
+
+        // Create realistic reading data JSON
+        var readingData = new PatientReading
+        {
+            DeviceId = deviceId,
+            Timestamp = (long)timestamp.Subtract(DateTime.UnixEpoch).TotalMilliseconds,
+            ReceivedAt = timestamp,
+            ActivityLevel = activities[Random.Shared.Next(activities.Length)],
+            DetectedAnomalies = detectedAnomalies,
+            MotionDetected = Random.Shared.Next(100) < 70,
+            Temperature = new TemperatureData
+            {
+                Celsius = temperature,
+                Fahrenheit = temperature * 9 / 5 + 32,
+                SensorOk = true,
+                Fever = hasFever
+            },
+            HeartRate = new HeartRateData
+            {
+                Bpm = heartRate,
+                AvgBpm = heartRate - 5 + Random.Shared.Next(10),
+                FingerDetected = true,
+                IrRaw = 50000 + Random.Shared.Next(10000),
+                HighRate = heartRate > 100
+            },
+            Accelerometer = new AccelerometerData
+            {
+                X = accelX,
+                Y = accelY,
+                Z = accelZ,
+                Magnitude = magnitude,
+                FallDetected = false
+            },
+            Gyroscope = new GyroscopeData
+            {
+                X = (float)(Random.Shared.NextDouble() - 0.5) * 50,
+                Y = (float)(Random.Shared.NextDouble() - 0.5) * 50,
+                Z = (float)(Random.Shared.NextDouble() - 0.5) * 50
+            },
+            Ambient = new AmbientData
+            {
+                TempCelsius = ambientTemp,
+                Humidity = humidity,
+                SensorOk = true
+            },
+            SensorStatus = new SensorStatusData
+            {
+                MpuOk = true,
+                MaxOk = true,
+                Ds18Ok = true,
+                DhtOk = true,
+                WifiRssi = rssi
+            }
+        };
+
+        var entity = new PatientReadingEntity
+        {
+            DeviceId = deviceId,
+            Timestamp = readingData.Timestamp,
+            ReceivedAt = timestamp,
+            ActivityLevel = readingData.ActivityLevel,
+            DetectedAnomalies = JsonSerializer.Serialize(detectedAnomalies),
+            ReadingData = JsonSerializer.Serialize(readingData)
+        };
+
+        readings.Add(entity);
+    }
+
+    db.PatientReadings.AddRange(readings);
+    db.SaveChanges();
+
+    Console.WriteLine($"✓ Seeded {readings.Count} mock patient readings across {deviceIds.Length} devices");
+}
+
+app.Run();
+
+// ============================================================
+//  JWT TOKEN GENERATOR
+// ============================================================
+static string GenerateJwtToken(string username, string secret, string issuer, string audience)
+{
+    var key = Encoding.ASCII.GetBytes(secret);
+    var tokenHandler = new JwtSecurityTokenHandler();
+    var tokenDescriptor = new SecurityTokenDescriptor
+    {
+        Subject = new ClaimsIdentity(new[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, username),
+            new Claim(ClaimTypes.Name, username)
+        }),
+        Expires = DateTime.UtcNow.AddHours(1),
+        Issuer = issuer,
+        Audience = audience,
+        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+    };
+    var token = tokenHandler.CreateToken(tokenDescriptor);
+    return tokenHandler.WriteToken(token);
+}
+
+// ============================================================
+//  SMART FALL DETECTION (Rule-Based)
+// ============================================================
+static bool DetectFall(PatientReading reading, ILogger<Program> logger)
+{
+    if (reading.Accelerometer is null || reading.Gyroscope is null)
+        return false;
+
+    // Threshold-based fall detection:
+    // High acceleration magnitude + high angular velocity = potential fall
+    var accelMagnitude = reading.Accelerometer.Magnitude;
+    var gyroMagnitude = MathF.Sqrt(
+        reading.Gyroscope.X * reading.Gyroscope.X +
+        reading.Gyroscope.Y * reading.Gyroscope.Y +
+        reading.Gyroscope.Z * reading.Gyroscope.Z
+    );
+
+    // Fall detection criteria:
+    // 1. Sudden spike in acceleration (freefall or impact)
+    // 2. High angular velocity (body tumbling)
+    // 3. Combined threshold (both must be elevated)
+    const float accelThreshold = 2.0f;     // ~2g impact
+    const float gyroThreshold = 200f;      // degrees/sec threshold
+    const float combinedThreshold = 2.5f;  // combined score
+
+    var combinedScore = (accelMagnitude / accelThreshold) + (gyroMagnitude / gyroThreshold);
+
+    if (combinedScore > combinedThreshold && accelMagnitude > accelThreshold)
+    {
+        logger.LogWarning("[FALL] Potential fall detected! Accel={A:F2}, Gyro={G:F1}, Score={S:F2}", 
+            accelMagnitude, gyroMagnitude, combinedScore);
+        return true;
+    }
+
+    return false;
+}
+
+// ============================================================
+//  SMART ACTIVITY DETECTION (Rule-Based)
+// ============================================================
+static string DetectActivity(PatientReading reading)
+{
+    if (reading.Accelerometer is null)
+        return "Unknown";
+
+    var accelMagnitude = reading.Accelerometer.Magnitude;
+    var motionDetected = reading.MotionDetected;
+    var heartRate = reading.HeartRate?.Bpm ?? 0;
+
+    // Activity levels based on acceleration magnitude + motion + heart rate
+    if (!motionDetected && accelMagnitude < 0.3f)
+        return "Sedentary";
+
+    if (accelMagnitude < 0.8f || heartRate < 80)
+        return "Light";
+
+    if (accelMagnitude < 1.5f || heartRate < 110)
+        return "Moderate";
+
+    return "Vigorous";
+}
+
+// ============================================================
+//  ALERT BUILDER
+// ============================================================
+static List<string> BuildAlerts(PatientReading r)
+{
+    var alerts = new List<string>();
+    if (r.Temperature?.Fever == true) alerts.Add("FEVER");
+    if (r.Accelerometer?.FallDetected == true) alerts.Add("FALL_DETECTED");
+    if (r.HeartRate?.HighRate == true) alerts.Add("HIGH_HEART_RATE");
+    if (r.Ambient?.TempCelsius > 35) alerts.Add("HIGH_AMBIENT_TEMP");
+    if (r.Ambient?.Humidity > 80) alerts.Add("HIGH_HUMIDITY");
+    if (r.Temperature?.SensorOk == false) alerts.Add("BODY_TEMP_SENSOR_FAIL");
+    if (r.SensorStatus?.MpuOk == false) alerts.Add("MPU_FAIL");
+    if (r.SensorStatus?.MaxOk == false) alerts.Add("MAX30102_FAIL");
+    if (r.SensorStatus?.Ds18Ok == false) alerts.Add("DS18B20_FAIL");
+    if (r.SensorStatus?.DhtOk == false) alerts.Add("DHT11_FAIL");
+    return alerts;
+}
+
+// ============================================================
+//  READINGS STORE  (Database-backed with EF Core)
+// ============================================================
+public class ReadingsStore
+{
+    private readonly IServiceProvider _serviceProvider;
+    private const int MaxReadings = 100;
+
+    public ReadingsStore(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+    }
+
+    public void Add(PatientReadingEntity reading)
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        db.PatientReadings.Add(reading);
+        db.SaveChanges();
+
+        // Keep only last MaxReadings per device to manage database size
+        var oldReadings = db.PatientReadings
+            .Where(r => r.DeviceId == reading.DeviceId)
+            .OrderByDescending(r => r.ReceivedAt)
+            .Skip(MaxReadings)
+            .ToList();
+
+        if (oldReadings.Count > 0)
+        {
+            db.PatientReadings.RemoveRange(oldReadings);
+            db.SaveChanges();
+        }
+    }
+
+    public IEnumerable<PatientReadingEntity> GetAll()
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        return db.PatientReadings
+            .OrderByDescending(r => r.ReceivedAt)
+            .Take(100)
+            .ToList();
+    }
+
+    public PatientReadingEntity? GetLatest()
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        return db.PatientReadings
+            .OrderByDescending(r => r.ReceivedAt)
+            .FirstOrDefault();
+    }
+
+    public int Count
+    {
+        get
+        {
+            using var scope = _serviceProvider.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+            return db.PatientReadings.Count();
+        }
+    }
+
+    public IEnumerable<PatientReadingEntity> GetByDevice(string deviceId)
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        return db.PatientReadings
+            .Where(r => r.DeviceId.ToLower() == deviceId.ToLower())
+            .OrderByDescending(r => r.ReceivedAt)
+            .Take(100)
+            .ToList();
+    }
+}
+
+// ============================================================
+//  USER STORE  (for JWT authentication - Database-backed)
+// ============================================================
+public class UserStore
+{
+    private readonly IServiceProvider _serviceProvider;
+
+    public UserStore(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+    }
+
+    public bool UserExists(string username)
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+        return db.Users.Any(u => u.Username.ToLower() == username.ToLower());
+    }
+
+    public void AddUser(string username, string password)
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+        var user = new UserEntity
+        {
+            Username = username.ToLower(),
+            PasswordHash = hashedPassword,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        db.Users.Add(user);
+        db.SaveChanges();
+    }
+
+    public bool ValidateUser(string username, string password)
+    {
+        using var scope = _serviceProvider.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<HealthMonitorDbContext>();
+
+        var user = db.Users.FirstOrDefault(u => u.Username.ToLower() == username.ToLower());
+        if (user != null)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, user.PasswordHash);
+        }
+        return false;
+    }
+}
+
+// ============================================================
+//  ML.NET ANOMALY DETECTION SERVICE  (SSA-based, no training)
+// ============================================================
+public class AnomalyDetectionService
+{
+    private readonly MLContext _mlContext;
+    private readonly ConcurrentDictionary<string, RollingWindowData> _deviceHistory = new();
+    private const int WindowSize = 20;
+    private const float SensitivityThreshold = 2.0f;  // standard deviations
+
+    public AnomalyDetectionService(MLContext mlContext)
+    {
+        _mlContext = mlContext;
+    }
+
+    public List<string> DetectAnomalies(PatientReading reading)
+    {
+        var anomalies = new List<string>();
+        if (reading.DeviceId is null) return anomalies;
+
+        var history = _deviceHistory.GetOrAdd(reading.DeviceId, _ => new RollingWindowData());
+
+        // Heart Rate Anomaly Detection
+        if (reading.HeartRate?.FingerDetected == true && reading.HeartRate.Bpm > 0)
+        {
+            history.HeartRates.Enqueue(reading.HeartRate.Bpm);
+            if (history.HeartRates.Count > WindowSize)
+                history.HeartRates.TryDequeue(out _);
+
+            if (IsOutlier(reading.HeartRate.Bpm, history.HeartRates))
+                anomalies.Add("ANOMALY_HEART_RATE");
+        }
+
+        // Temperature Anomaly Detection
+        if (reading.Temperature?.SensorOk == true)
+        {
+            history.Temperatures.Enqueue(reading.Temperature.Celsius);
+            if (history.Temperatures.Count > WindowSize)
+                history.Temperatures.TryDequeue(out _);
+
+            if (IsOutlier(reading.Temperature.Celsius, history.Temperatures))
+                anomalies.Add("ANOMALY_BODY_TEMP");
+        }
+
+        // Acceleration Anomaly Detection
+        if (reading.Accelerometer is not null)
+        {
+            history.Accelerations.Enqueue(reading.Accelerometer.Magnitude);
+            if (history.Accelerations.Count > WindowSize)
+                history.Accelerations.TryDequeue(out _);
+
+            if (IsOutlier(reading.Accelerometer.Magnitude, history.Accelerations))
+                anomalies.Add("ANOMALY_ACCELERATION");
+        }
+
+        // Ambient Anomaly Detection
+        if (reading.Ambient?.SensorOk == true)
+        {
+            history.AmbientTemps.Enqueue(reading.Ambient.TempCelsius);
+            if (history.AmbientTemps.Count > WindowSize)
+                history.AmbientTemps.TryDequeue(out _);
+
+            if (IsOutlier(reading.Ambient.TempCelsius, history.AmbientTemps))
+                anomalies.Add("ANOMALY_AMBIENT_TEMP");
+        }
+
+        return anomalies;
+    }
+
+    private bool IsOutlier(float value, Queue<float> window)
+    {
+        if (window.Count < 5) return false;  // Need minimum samples
+
+        var mean = window.Average();
+        var stdDev = MathF.Sqrt(window.Average(x => MathF.Pow(x - mean, 2)));
+
+        // Z-score based outlier detection
+        var zScore = MathF.Abs((value - mean) / (stdDev + 0.0001f));
+        return zScore > SensitivityThreshold;
+    }
+
+    private class RollingWindowData
+    {
+        public Queue<float> HeartRates { get; } = new();
+        public Queue<float> Temperatures { get; } = new();
+        public Queue<float> Accelerations { get; } = new();
+        public Queue<float> AmbientTemps { get; } = new();
+    }
+}
+
+// ============================================================
+//  AUTH MODELS
+// ============================================================
+public class RegisterRequest
+{
+    public string? Username { get; set; }
+    public string? Password { get; set; }
+}
+
+public class LoginRequest
+{
+    public string? Username { get; set; }
+    public string? Password { get; set; }
+}
+
+public class PatientReading
+{
+    [JsonPropertyName("deviceId")]
+    public string? DeviceId { get; set; }
+
+    [JsonPropertyName("timestamp")]
+    public long Timestamp { get; set; }          // millis() from ESP
+
+    public DateTime ReceivedAt { get; set; }     // set by server
+
+    public string? ActivityLevel { get; set; }   // Sedentary, Light, Moderate, Vigorous
+    public List<string>? DetectedAnomalies { get; set; } = new();
+
+    [JsonPropertyName("accelerometer")]
+    public AccelerometerData? Accelerometer { get; set; }
+
+    [JsonPropertyName("gyroscope")]
+    public GyroscopeData? Gyroscope { get; set; }
+
+    [JsonPropertyName("temperature")]
+    public TemperatureData? Temperature { get; set; }
+
+    [JsonPropertyName("heartRate")]
+    public HeartRateData? HeartRate { get; set; }
+
+    [JsonPropertyName("motionDetected")]
+    public bool MotionDetected { get; set; }
+
+    [JsonPropertyName("ambient")]
+    public AmbientData? Ambient { get; set; }
+
+    [JsonPropertyName("sensorStatus")]
+    public SensorStatusData? SensorStatus { get; set; }
+}
+
+public class AccelerometerData
+{
+    [JsonPropertyName("x")] public float X { get; set; }
+    [JsonPropertyName("y")] public float Y { get; set; }
+    [JsonPropertyName("z")] public float Z { get; set; }
+    [JsonPropertyName("magnitude")] public float Magnitude { get; set; }
+    [JsonPropertyName("fallDetected")] public bool FallDetected { get; set; }
+}
+
+public class GyroscopeData
+{
+    [JsonPropertyName("x")] public float X { get; set; }
+    [JsonPropertyName("y")] public float Y { get; set; }
+    [JsonPropertyName("z")] public float Z { get; set; }
+}
+
+public class TemperatureData
+{
+    [JsonPropertyName("celsius")] public float Celsius { get; set; }
+    [JsonPropertyName("fahrenheit")] public float Fahrenheit { get; set; }
+    [JsonPropertyName("sensorOk")] public bool SensorOk { get; set; }
+    [JsonPropertyName("fever")] public bool Fever { get; set; }
+}
+
+public class HeartRateData
+{
+    [JsonPropertyName("bpm")] public float Bpm { get; set; }
+    [JsonPropertyName("avgBpm")] public int AvgBpm { get; set; }
+    [JsonPropertyName("fingerDetected")] public bool FingerDetected { get; set; }
+    [JsonPropertyName("irRaw")] public long IrRaw { get; set; }
+    [JsonPropertyName("highRate")] public bool HighRate { get; set; }
+}
+
+public class AmbientData
+{
+    [JsonPropertyName("tempCelsius")] public float TempCelsius { get; set; }
+    [JsonPropertyName("humidity")] public float Humidity { get; set; }
+    [JsonPropertyName("sensorOk")] public bool SensorOk { get; set; }
+}
+
+public class SensorStatusData
+{
+    [JsonPropertyName("mpuOk")] public bool MpuOk { get; set; }
+    [JsonPropertyName("maxOk")] public bool MaxOk { get; set; }
+    [JsonPropertyName("ds18Ok")] public bool Ds18Ok { get; set; }
+    [JsonPropertyName("dhtOk")] public bool DhtOk { get; set; }
+    [JsonPropertyName("wifiRssi")] public int WifiRssi { get; set; }
+}
