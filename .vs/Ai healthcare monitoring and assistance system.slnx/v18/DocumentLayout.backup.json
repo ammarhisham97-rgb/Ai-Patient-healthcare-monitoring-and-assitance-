@@ -3,40 +3,56 @@
   "WorkspaceRootPath": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\API_DOCUMENTATION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API_DOCUMENTATION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\models\\reportmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\models\\reportmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\pdfreportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\pdfreportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\readinglogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\readinglogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\extensions\\endpointextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\extensions\\endpointextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\userstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\userstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\readinganalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\readinganalysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\ai\\services\\anomalydetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\ai\\services\\anomalydetectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\models\\patientreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\models\\patientreading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\readingsstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\readingsstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\data\\databaseseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\extensions\\applicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\extensions\\applicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\healthmonitordbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\healthmonitordbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_API_DOCUMENTATION.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -45,30 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\SAMPLE_READINGS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SAMPLE_READINGS.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\data\\healthmonitordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\data\\healthmonitordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511162732_finall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511162732_finall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511161846_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511161846_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511163119_updateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511163119_updateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -89,6 +81,54 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\ADVANCED_FEATURES_ROADMAP.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ADVANCED_FEATURES_ROADMAP.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\models\\reportmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\models\\reportmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\data\\healthmonitordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\data\\healthmonitordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\services\\pdfreportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\services\\pdfreportgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260512000001_addanomalyhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511162732_finall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511162732_finall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511163119_updateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511163119_updateschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|c:\\asp.netcore\\ai healthcare monitoring and assistance system\\ai healthcare monitoring and assistance system\\migrations\\20260511161846_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFC28F11-EDFE-4A1C-47F2-0ED8E8A3B102}|Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj|solutionrelative:ai healthcare monitoring and assistance system\\migrations\\20260511161846_final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -121,86 +161,213 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "API_DOCUMENTATION.md",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\API_DOCUMENTATION.md",
-              "RelativeDocumentMoniker": "API_DOCUMENTATION.md",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\API_DOCUMENTATION.md",
-              "RelativeToolTip": "API_DOCUMENTATION.md",
-              "ViewState": "AgIAAFsIAAAAAAAAAAAIwHAIAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-07-04T22:21:05.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-04T19:53:57.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PdfReportGenerator.cs",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAQwC4CAAAAAAAAAAAAAA==",
+              "Title": "ReadingLogger.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingLogger.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\ReadingLogger.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingLogger.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\ReadingLogger.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T22:57:20.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReportService.cs",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T22:56:48.52Z",
+              "WhenOpened": "2026-09-07T13:51:09.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReportModels.cs",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T22:56:15.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Program.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Program.cs",
               "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Program.cs",
               "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Program.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAANUDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T14:59:30.058Z",
+              "WhenOpened": "2026-09-07T13:50:03.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EndpointExtensions.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\EndpointExtensions.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Extensions\\EndpointExtensions.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\EndpointExtensions.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Extensions\\EndpointExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:48:28.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReadingAnalysisService.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingAnalysisService.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\ReadingAnalysisService.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingAnalysisService.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\ReadingAnalysisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:56.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AnomalyDetectionService.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\AI\\Services\\AnomalyDetectionService.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\AI\\Services\\AnomalyDetectionService.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\AI\\Services\\AnomalyDetectionService.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\AI\\Services\\AnomalyDetectionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:42.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserStore.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\UserStore.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\UserStore.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\UserStore.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\UserStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:29.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReadingsStore.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingsStore.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\ReadingsStore.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReadingsStore.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\ReadingsStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:23.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PatientReading.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\PatientReading.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Models\\PatientReading.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\PatientReading.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Models\\PatientReading.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:16.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DatabaseSeeder.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\DatabaseSeeder.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Data\\DatabaseSeeder.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\DatabaseSeeder.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Data\\DatabaseSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:47:03.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationExtensions.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\ApplicationExtensions.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Extensions\\ApplicationExtensions.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\ApplicationExtensions.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Extensions\\ApplicationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:46:54.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\JwtTokenGenerator.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\JwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:48:05.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T13:46:49.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HealthMonitorDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAswEcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T16:10:09.655Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\appsettings.json",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\appsettings.json",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\appsettings.json",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-11T15:08:23.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "REPORT_GENERATION_QUICK_REFERENCE.md",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_GENERATION_QUICK_REFERENCE.md",
+              "RelativeDocumentMoniker": "REPORT_GENERATION_QUICK_REFERENCE.md",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_GENERATION_QUICK_REFERENCE.md",
+              "RelativeToolTip": "REPORT_GENERATION_QUICK_REFERENCE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-11T22:59:52.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ADVANCED_FEATURES_ROADMAP.md",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\ADVANCED_FEATURES_ROADMAP.md",
               "RelativeDocumentMoniker": "ADVANCED_FEATURES_ROADMAP.md",
@@ -213,31 +380,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "REPORT_GENERATION_QUICK_REFERENCE.md",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_GENERATION_QUICK_REFERENCE.md",
-              "RelativeDocumentMoniker": "REPORT_GENERATION_QUICK_REFERENCE.md",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_GENERATION_QUICK_REFERENCE.md",
-              "RelativeToolTip": "REPORT_GENERATION_QUICK_REFERENCE.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-11T22:59:52.426Z"
+              "Title": "ReportModels.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Models\\ReportModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T22:56:15.748Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\appsettings.json",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\appsettings.json",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\appsettings.json",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "HealthMonitorDbContext.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAzwEoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T15:13:11.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\ReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T22:56:48.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PdfReportGenerator.cs",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Services\\PdfReportGenerator.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwC4CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T22:57:20.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-11T15:08:23.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T19:53:57.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "REPORT_API_DOCUMENTATION.md",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_API_DOCUMENTATION.md",
               "RelativeDocumentMoniker": "REPORT_API_DOCUMENTATION.md",
@@ -249,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "REPORT_GENERATION_FEATURE_GUIDE.md",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\REPORT_GENERATION_FEATURE_GUIDE.md",
               "RelativeDocumentMoniker": "REPORT_GENERATION_FEATURE_GUIDE.md",
@@ -261,19 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HealthMonitorDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Migrations\\HealthMonitorDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T16:10:09.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 26,
               "Title": "Ai healthcare monitoring and assistance system.csproj",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system.csproj",
@@ -285,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "SAMPLE_READINGS.md",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\SAMPLE_READINGS.md",
               "RelativeDocumentMoniker": "SAMPLE_READINGS.md",
@@ -297,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\frontend\\styles.css",
               "RelativeDocumentMoniker": "frontend\\styles.css",
@@ -309,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\frontend\\index.html",
               "RelativeDocumentMoniker": "frontend\\index.html",
@@ -321,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "20260512000001_AddAnomalyHistory.Designer.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\20260512000001_AddAnomalyHistory.Designer.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\20260512000001_AddAnomalyHistory.Designer.cs",
@@ -333,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 28,
               "Title": "20260512000001_AddAnomalyHistory.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\20260512000001_AddAnomalyHistory.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\20260512000001_AddAnomalyHistory.cs",
@@ -345,19 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HealthMonitorDbContext.cs",
-              "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
-              "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
-              "ToolTip": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
-              "RelativeToolTip": "Ai healthcare monitoring and assistance system\\Data\\HealthMonitorDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAxwEoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T15:13:11.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 29,
               "Title": "20260511162732_Finall.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\20260511162732_Finall.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\20260511162732_Finall.cs",
@@ -369,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "20260511163119_UpdateSchema.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\20260511163119_UpdateSchema.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\20260511163119_UpdateSchema.cs",
@@ -381,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 31,
               "Title": "20260511161846_Final.cs",
               "DocumentMoniker": "C:\\Asp.netcore\\Ai healthcare monitoring and assistance system\\Ai healthcare monitoring and assistance system\\Migrations\\20260511161846_Final.cs",
               "RelativeDocumentMoniker": "Ai healthcare monitoring and assistance system\\Migrations\\20260511161846_Final.cs",

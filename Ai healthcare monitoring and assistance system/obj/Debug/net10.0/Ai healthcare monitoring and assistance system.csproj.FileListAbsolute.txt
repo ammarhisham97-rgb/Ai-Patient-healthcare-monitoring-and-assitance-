@@ -188,3 +188,4 @@ C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare moni
 C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\SixLabors.Fonts.dll
 C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\System.IO.Packaging.dll
 C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\bin\Debug\net10.0\XLParser.dll
+C:\Asp.netcore\Ai healthcare monitoring and assistance system\Ai healthcare monitoring and assistance system\obj\Debug\net10.0\Ai healthcare monitoring and assistance system.sourcelink.json
